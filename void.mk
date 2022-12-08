@@ -2,6 +2,7 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 $(call inherit-product, vendor/aosp/config/BoardConfigSoong.mk)
 $(call inherit-product, device/generic/sepolicy/common/sepolicy.mk)
 -include vendor/aosp/build/core/config.mk
+
 TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_NO_KERNEL_IMAGE := true
 
@@ -14,3 +15,4 @@ TARGET_BOOT_ANIMATION_RES := 720
 PRODUCT_PACKAGES += \
     libaptX_encoder \
     libaptXHD_encoder
+
