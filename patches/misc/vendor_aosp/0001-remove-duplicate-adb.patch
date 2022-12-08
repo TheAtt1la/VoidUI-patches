@@ -7,7 +7,7 @@ Subject: [PATCH] remove duplicate adb
  config/common.mk | 4 ----
  1 file changed, 4 deletions(-)
 
-diff --git a/common.mk b/common.mk
+diff --git a/config/common.mk b/config/common.mk
 index 41acd53..2a86012 100644
 --- a/config/common.mk
 +++ b/config/common.mk
