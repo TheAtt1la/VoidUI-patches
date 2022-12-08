@@ -1,0 +1,102 @@
+From 6919abf8682a685668bac326bab63b2ea7cba513 Mon Sep 17 00:00:00 2001
+From: TheAtt1la <alittauwu@gmail.com>
+Date: Thu, 8 Dec 2022 11:02:56 -0300
+Subject: [PATCH] slim patch for VoidUI
+
+---
+ config.mk | 32 +-------------------------------
+ 1 file changed, 1 insertion(+), 31 deletions(-)
+
+diff --git a/config.mk b/config.mk
+index c52cec0..78cce35 100755
+--- a/config.mk
++++ b/config.mk
+@@ -16,25 +16,12 @@
+ #
+ #
+ 
+-# Recorder
+-ifeq ($(TARGET_SUPPORTS_GOOGLE_RECORDER), true)
+-PRODUCT_PACKAGES += \
+-    RecorderPrebuilt
+-endif
+-
+ # arcore
+ ifeq ($(TARGET_INCLUDE_STOCK_ARCORE),true)
+ PRODUCT_PACKAGES += \
+     arcore
+ endif
+ 
+-# Live Wallpapers
+-ifeq ($(TARGET_INCLUDE_LIVE_WALLPAPERS),true)
+-PRODUCT_PACKAGES += \
+-    PixelLiveWallpaperPrebuilt \
+-    MicropaperPrebuilt
+-endif
+-
+ # Quick Tap
+ ifeq ($(TARGET_SUPPORTS_QUICK_TAP),true)
+ PRODUCT_PACKAGES += \
+@@ -49,24 +36,14 @@ endif
+ 
+ # product/app
+ PRODUCT_PACKAGES += \
+-    CalculatorGooglePrebuilt \
+-    CalendarGooglePrebuilt \
+     CarrierMetrics \
+-    Chrome \
+-    Chrome-Stub \
+     DevicePolicyPrebuilt \
+     DiagnosticsToolPrebuilt \
+-    GoogleContacts \
+-    GoogleTTS \
+     LatinIMEGooglePrebuilt \
+     LocationHistoryPrebuilt \
+-    MarkupGoogle \
+-    Photos \
+     PixelThemesStub \
+     PixelThemesStub2022_and_newer \
+-    PixelWallpapers2022 \
+     PrebuiltBugle \
+-    PrebuiltDeskClockGoogle \
+     PrebuiltGoogleAdservicesTvp \
+     PrebuiltGoogleTelemetryTvp \
+     SoundAmplifierPrebuilt \
+@@ -74,16 +51,12 @@ PRODUCT_PACKAGES += \
+     TrichromeLibrary \
+     TrichromeLibrary-Stub \
+     Tycho \
+-    VZWAPNLib \
+-    WebViewGoogle \
+-    WebViewGoogle-Stub \
+-    talkback
++    VZWAPNLib
+ 
+ # product/priv-app
+ PRODUCT_PACKAGES += \
+     AdaptiveVPNPrebuilt \
+     AmbientStreaming \
+-    AndroidAutoStubPrebuilt \
+     AppDirectedSMSService \
+     BetterBugStub \
+     CarrierLocation \
+@@ -97,8 +70,6 @@ PRODUCT_PACKAGES += \
+     DMService \
+     FilesPrebuilt \
+     GCS \
+-    GoogleCamera \
+-    GoogleDialer \
+     GoogleOneTimeInitializer \
+     GoogleRestorePrebuilt \
+     HelpRtcPrebuilt \
+@@ -120,7 +91,6 @@ PRODUCT_PACKAGES += \
+     Showcase \
+     TetheringEntitlement \
+     TurboPrebuilt \
+-    Velvet \
+     VzwOmaTrigger \
+     WellbeingPrebuilt \
+     WfcActivation
+-- 
+2.38.1
+
