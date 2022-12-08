@@ -4,13 +4,13 @@ Date: Thu, 8 Dec 2022 14:22:14 -0300
 Subject: [PATCH] remove duplicate adb
 
 ---
- common.mk | 4 ----
+ config/common.mk | 4 ----
  1 file changed, 4 deletions(-)
 
 diff --git a/common.mk b/common.mk
 index 41acd53..2a86012 100644
---- a/common.mk
-+++ b/common.mk
+--- a/config/common.mk
++++ b/config/common.mk
 @@ -31,10 +31,6 @@ ifeq ($(TARGET_BUILD_VARIANT),eng)
  PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
  PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.usb.config=adb
